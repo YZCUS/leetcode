@@ -6,3 +6,18 @@
 # Because nums[0] + nums[1] = 2 + 7 = 9,
 # return [0, 1].
 
+class solution:
+    def twosum(self,nums,target):
+        """
+        :type nums:list[int]
+        :type target:int
+        :rtype: list[int]
+        """
+        dict={}
+        for i in range(len(nums)):
+            if target-nums[i] not in dict:
+                dict[nums[i]]=i
+            else:
+                return [dict[target-nums[i]],i]
+
+print(solution.twosum(solution,[2,7,11,15],17))
