@@ -11,3 +11,14 @@
 # Input: 120
 # Output: 21
 
+class solution:
+    def reverseint(self,x:int) -> int:
+        if x<0:
+            return (-1)*int(str(abs(x))[::-1])
+        else:
+            return int(str(x)[::-1])
+
+print(solution.reverseint(solution,123))
+print(solution.reverseint(solution,-123))
+print(solution.reverseint(solution,120))
+print(solution.reverseint(solution,-910))
