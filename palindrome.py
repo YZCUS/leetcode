@@ -12,3 +12,14 @@
 # Input: 10
 # Output: false
 # Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
+
+class solution:
+    def palindrome(self,x:int)->bool:
+        if str(x)==str(x)[::-1]:
+            return True
+        else:
+            return False
+
+print(solution.palindrome(solution,121))
+print(solution.palindrome(solution,-121))
+print(solution.palindrome(solution,10))
