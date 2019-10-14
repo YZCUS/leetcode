@@ -22,13 +22,18 @@
 # Output: true
 
 class solution:
-    def valid_parentheses(self,s:str)->bool:
-        while "()" in s or "[]" in s or "{}" in s:
-            s=s.replace("()","").replace("[]","").replace("{}","")
-        return True if s=="" else False
+    def valid_parentheses_1(self,s:str)->bool:
+        dict={"(":")","[":"]","{":"}"}
+        stack=[]
+        for i in s:
+            if i in dict:
+                stack.append(i)
+            elif not stack or i!=dict[stack.pop()]:
+                return False
+        return not stack
 
-print(solution.valid_parentheses(solution,"()"))
-print(solution.valid_parentheses(solution,"()[]{}"))
-print(solution.valid_parentheses(solution,"(]"))
-print(solution.valid_parentheses(solution,"([)]"))
-print(solution.valid_parentheses(solution,"{[]}"))
+print(solution.valid_parentheses_1(solution,"()"))
+print(solution.valid_parentheses_1(solution,"()[]{}"))
+print(solution.valid_parentheses_1(solution,"(]"))
+print(solution.valid_parentheses_1(solution,"([)]"))
+print(solution.valid_parentheses_1(solution,"{[]}"))
