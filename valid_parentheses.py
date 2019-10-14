@@ -20,3 +20,16 @@
 # Example 5:
 # Input: "{[]}"
 # Output: true
+
+class solution:
+    def valid_parentheses(self,s:str)->bool:
+        dict={"(":")","[":"]","{":"}"}
+        while "()" in s or "[]" in s or "{}" in s:
+            s=s.replace("()","").replace("[]","").replace("{}","")
+        return True if s=="" else False
+
+print(solution.valid_parentheses(solution,"()"))
+print(solution.valid_parentheses(solution,"()[]{}"))
+print(solution.valid_parentheses(solution,"(]"))
+print(solution.valid_parentheses(solution,"([)]"))
+print(solution.valid_parentheses(solution,"{[]}"))
