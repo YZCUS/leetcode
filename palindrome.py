@@ -15,10 +15,7 @@
 
 class solution:
     def palindrome(self,x:int)->bool:
-        if str(x)==str(x)[::-1]:
-            return True
-        else:
-            return False
+        return str(x)==str(x)[::-1]
 
 print(solution.palindrome(solution,121))
 print(solution.palindrome(solution,-121))
