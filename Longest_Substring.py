@@ -19,10 +19,10 @@
 class solution:
     def longest_substring(self,s:str) ->int:
         a=""
-        b=""
         for i in range(len(s)):
             for j in range(len(s)):
                 if j>=i:
+                    b=""
                     for k in range(j-i+1):
                         if s[i:j+1][k] not in b:
                             b+=s[i:j+1][k]    
@@ -33,3 +33,4 @@ class solution:
 print(solution.longest_substring(solution,"abcabcbb"))
 print(solution.longest_substring(solution,"bbbbbbb"))
 print(solution.longest_substring(solution,"pwwkew"))
+print(solution.longest_substring(solution,"vdznhpoeattjfcqdbrvsshgpwixfhajffksmzisadlliqboruljpureqbcxlcgqhrkvqunsaa"))
