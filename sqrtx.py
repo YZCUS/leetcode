@@ -13,6 +13,6 @@
 
 class solution:
     def sqrtx(self,x:int) -> int:
-        return "the number is negative integer" if x < 0 else int(x**0.5)//1
+        return "the number is negative integer" if x < 0 else int(x**0.5)
 print(solution.sqrtx(solution,8))
 print(solution.sqrtx(solution,9))
