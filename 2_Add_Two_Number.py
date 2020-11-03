@@ -17,11 +17,11 @@ def Createlist(n):
 def printlist(head):
     p=head
     while p!=None:
-        print(p.value)
+        print(p.value,end=' ')
         p=p.next
 
 def main():
-    print("Create a linklist")
+    print("Create a linklist",end='\n')
     head=Createlist(7)
     printlist(head)
 
