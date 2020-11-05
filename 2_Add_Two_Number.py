@@ -28,4 +28,32 @@ class ListNode:
 
 class solution:
     def addTwoNumbers(self,l1:ListNode,l2:ListNode):
+        """
+        :type l1: ListNode
+        :type l2: ListNode
+        :rtype: ListNode
+        """
+        head=R=ListNode(0)
+        flag=0 #用來標記是否進位
         
+        while l1 and l2:
+            if flag==1:
+                add=l1.val+l2.val+1
+                l1=l1.next
+                l2=l2.next
+            else:
+                add=l1.val+l2.val
+                l1=l1.next
+                l2=l2.next
+            if add>=10:
+                flag=1
+                add=add-10
+                R=ListNode(add)
+                R=R.next
+            else:
+                flag=0
+                R=ListNode(add)
+                R=R.next
+        return head.next
+
+print(solution.addTwoNumbers())
