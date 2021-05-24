@@ -13,12 +13,16 @@
 
 class solution:
     def reverseint(self,x:int) -> int:
-        if abs(x)>2**31-1:
-            return 0
-        elif x<0:
-            return (-1)*int(str(abs(x))[::-1]) if int(str(abs(x))[::-1])<2**31 else 0
-        else:
-            return int(str(x)[::-1]) if int(str(abs(x))[::-1])<2**31 else 0
+        # if abs(x)>2**31-1:
+        #     return 0
+        # elif x<0:
+        #     return (-1)*int(str(abs(x))[::-1]) if int(str(abs(x))[::-1])<2**31 else 0
+        # else:
+        #     return int(str(x)[::-1]) if int(str(abs(x))[::-1])<2**31 else 0
+        
+        # short version
+        s = (str(x)[::-1] if x>=0 else '-'+str(-x)[::-1])
+        return int(s) if int(s) in range(-2**31,2**31-1) else 0
 
 print(solution.reverseint(solution,123))
 print(solution.reverseint(solution,-123))

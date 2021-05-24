@@ -9,16 +9,22 @@
 # Output: "bb"
 
 
-class solution:
+class solution: 
     def LongestPalindrome(self,s:str)-> str:
-        a=""
-        for i in range(len(s)):
-            for j in range(len(s)):
-                if j>=i and s[i:j+1]==s[i:j+1][::-1] and len(s[i:j+1])>len(a):
-                    a=s[i:j+1]
-        return a
 
 
+
+
+
+
+
+
+        # a="" # this solution works however the time complexity and space complexity are too high, we have to reduce time to pass the exam
+        # for i in range(len(s)):
+        #     for j in range(len(s)):
+        #         if j>=i and s[i:j+1]==s[i:j+1][::-1] and j-i+1>len(a):
+        #             a=s[i:j+1]
+        # return a
 print(solution.LongestPalindrome(solution,"babad"))
 print(solution.LongestPalindrome(solution,"cbbd"))
-print(solution.LongestPalindrome(solution,""))
+print(solution.LongestPalindrome(solution,"zoozssawwqqqqq"))
